@@ -11,12 +11,12 @@ let poster=document.querySelector('img')
     document.addEventListener('DOMContentLoaded',function(){
         fetch  ('http://localhost:3000/films')
         .then(response=>response.json())
-        console.log(response)
+        
         .then(data=>{
         data.forEach(episode=>{
 let li=document.createElement('li');
 //let buttons=document.createElement('button')
-let noOfButtons=15;
+/*let noOfButtons=15;
 for(let i=0;i<noOfButtons;i++){
     let buttons=document.createElement('button')
     buttons.innerText='x'
@@ -31,10 +31,10 @@ ul.appendChild(buttons)
 }
 
 
-console.log(buttons)
+console.log(buttons)*/
 
 
-li.innerText= episode.title;//buttons;
+li.innerText= episode.title;
 //li.addEventListener('click',firstMovie(episode)) cannot do this as it will invoke the function immediately.
 //and we need our function invoked afer click(line 69)
 ul.appendChild(li)
